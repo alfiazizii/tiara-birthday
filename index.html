@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Special birthday celebration page with memories and surprises"
+    />
+    <meta name="theme-color" content="#ff69b4" />
+    <link rel="icon" type="image/x-icon" href="/images/icons8-love.gif" />
+    <title>Happy Birthday, Sayang! 🎉</title>
+
+    <link rel="preload" href="music/There She Goes.mp3" as="audio" />
+
+    <!-- Critical CSS -->
+    <style>
+      .loading-overlay {
+        position: fixed;
+        inset: 0;
+        background: #ffd1dc;
+        display: grid;
+        place-items: center;
+        z-index: 9999;
+      }
+      .loading-heart {
+        font-size: clamp(2rem, 5vw, 3rem);
+        animation: pulse 1s infinite;
+      }
+      @keyframes pulse {
+        50% {
+          transform: scale(1.1);
+        }
+      }
+    </style>
+
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+    />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-overlay" aria-label="Loading...">
+      <div class="loading-heart" role="progressbar">❤️</div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Landing Section -->
+      <section class="section landing-page" id="landing">
+        <!-- Music Control -->
+        <button class="music-toggle" aria-label="Toggle Music" type="button">
+          <span class="music-icon" aria-hidden="true">🎵</span>
+        </button>
+
+        <!-- Background Effects -->
+        <div class="stars-container" aria-hidden="true"></div>
+        <div class="floating-hearts-container" aria-hidden="true"></div>
+
+        <!-- Main Content -->
+        <div class="landing-content">
+          <h1 class="title">Happy Birthday, Tiara! 🎉</h1>
+
+          <div class="birthday-message">
+            <p>
+              Today is all about celebrating the most amazing person in my life
+            </p>
+            <div class="hearts-row" aria-hidden="true">
+              <span class="heart">❤️</span>
+              <span class="heart">❤️</span>
+              <span class="heart">❤️</span>
+            </div>
+          </div>
+
+          <button class="journey-button" type="button">
+            <span class="button-content">
+              Start Our Journey
+              <span class="gift-icon" aria-hidden="true">🎁</span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Memories Section -->
+      <section class="section timeline" id="memories">
+        <h2>Our Memories</h2>
+
+        <div class="swiper-container memory-swiper" aria-label="Memory Gallery">
+          <div class="swiper-wrapper">
+            <!-- Memory Slides -->
+            <div class="swiper-slide memory-slide">
+              <article class="memory-card">
+                <img
+                  src="images/first_date.jpg"
+                  alt="Our first meeting together"
+                  loading="lazy"
+                  width="300"
+                  height="400"
+                />
+                <div class="memory-content">
+                  <h3>First Meet</h3>
+                  <time class="memory-date">7 September 2024</time>
+                  <p class="memory-description">
+                    The day we first met and everything changed...
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide memory-slide">
+              <article class="memory-card">
+                <img
+                  src="images/first_travel.jpg"
+                  alt="Our first date together"
+                  loading="lazy"
+                  width="300"
+                  height="400"
+                />
+                <div class="memory-content">
+                  <h3>First Holiday Together</h3>
+                  <time class="memory-date">14 September 2024</time>
+                  <p class="memory-description">
+                    Our wonderful holiday together...
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide memory-slide">
+              <article class="memory-card">
+                <img
+                  src="images/first_photobox.jpg"
+                  alt="A special moment we shared"
+                  loading="lazy"
+                  width="300"
+                  height="400"
+                />
+                <div class="memory-content">
+                  <h3>First Photobox</h3>
+                  <time class="memory-date">2 October 2024</time>
+                  <p class="memory-description">
+                    One of our most precious moments...
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide memory-slide">
+              <article class="memory-card">
+                <img
+                  src="images/first_shooting_date.jpg"
+                  alt="A special moment we shared"
+                  loading="lazy"
+                  width="300"
+                  height="400"
+                />
+                <div class="memory-content">
+                  <h3>Shooting Date</h3>
+                  <time class="memory-date">2 November 2024</time>
+                  <p class="memory-description">
+                    One of our most precious moments...
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide memory-slide">
+              <article class="memory-card">
+                <img
+                  src="images/riding.jpg"
+                  alt="A special moment we shared"
+                  loading="lazy"
+                  width="300"
+                  height="400"
+                />
+                <div class="memory-content">
+                  <h3>Night Ride</h3>
+                  <time class="memory-date">20 November 2024</time>
+                  <p class="memory-description">
+                    One of our most precious moments...
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="swiper-button-next" aria-label="Next slide"></div>
+          <div class="swiper-button-prev" aria-label="Previous slide"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- Gifts Section -->
+      <section class="section kado" id="gifts">
+        <h2>A gift for you 🎁</h2>
+        <p class="gift-intro">Choose one of the mystery box gifts below!</p>
+
+        <div class="mystery-boxes-container">
+          <!-- Mystery Box 1 -->
+          <div class="mystery-box" data-gift="ring" tabindex="0" role="button">
+            <div class="box-wrapper">
+              <div class="box">
+                <div class="box-lid">
+                  <div class="box-bow"></div>
+                </div>
+                <div class="box-content">
+                  <img
+                    src="images/ring.webp"
+                    alt="A beautiful promise ring"
+                    class="gift-image"
+                    loading="lazy"
+                    width="200"
+                    height="200"
+                  />
+                  <p class="gift-message">A promise of forever 💍</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-number" aria-label="Gift box 1">1</div>
+          </div>
+
+          <!-- Mystery Box 2 -->
+          <div
+            class="mystery-box"
+            data-gift="bracelet"
+            tabindex="0"
+            role="button"
+          >
+            <div class="box-wrapper">
+              <div class="box">
+                <div class="box-lid">
+                  <div class="box-bow"></div>
+                </div>
+                <div class="box-content">
+                  <img
+                    src="images/bracelet.webp"
+                    alt="A stunning bracelet"
+                    class="gift-image"
+                    loading="lazy"
+                    width="200"
+                    height="200"
+                  />
+                  <p class="gift-message">
+                    A symbol of our unbreakable bond 💕
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="box-number" aria-label="Gift box 2">2</div>
+          </div>
+
+          <!-- Mystery Box 3 -->
+          <div
+            class="mystery-box"
+            data-gift="necklace"
+            tabindex="0"
+            role="button"
+          >
+            <div class="box-wrapper">
+              <div class="box">
+                <div class="box-lid">
+                  <div class="box-bow"></div>
+                </div>
+                <div class="box-content">
+                  <img
+                    src="images/necklace.webp"
+                    alt="A stunning necklace"
+                    class="gift-image"
+                    loading="lazy"
+                    width="200"
+                    height="200"
+                  />
+                  <p class="gift-message">A necklace to match your beauty ✨</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-number" aria-label="Gift box 3">3</div>
+          </div>
+        </div>
+
+        <!-- Gift Modal -->
+        <div class="gift-modal">
+          <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-gift-content"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Love Letter Section -->
+      <section class="section love-letter" id="letter">
+        <h2>A Letter for You</h2>
+        <div id="typedLetter" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <!-- Audio -->
+    <audio id="bgMusic" preload="auto" loop>
+      <source src="music/There She Goes.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
